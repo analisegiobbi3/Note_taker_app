@@ -30,3 +30,5 @@ notes.post('/', (req,res) =>{
     }
 
 })
+
+module.exports = notes;

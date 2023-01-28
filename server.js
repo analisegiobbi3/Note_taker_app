@@ -2,9 +2,9 @@ const express = require('express');
 const path = require('path')
 const api = require('./routes/index.js')
 
-PORT = 3001;
+const PORT = 3001;
 
-app = express();
+const app = express();
 
 //middleware
 app.use(express.json());
