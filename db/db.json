@@ -6,5 +6,20 @@
     {
         "text": "test",
         "title": "test"
+    },
+    {
+        "text": "This is a test note",
+        "title": "Test Note",
+        "note_id": "af48d6ce-644c-4684-9cbf-292c5d9cb2e0"
+    },
+    {
+        "text": "test",
+        "title": "Test",
+        "note_id": "32f8efd0-4af7-439a-9d01-2c6b6d069d8b"
+    },
+    {
+        "text": "This note is a test to show the functionality of the application ",
+        "title": "This is a Test",
+        "note_id": "1acb3b90-47a9-4426-a134-e1ae50b9c0db"
     }
 ]

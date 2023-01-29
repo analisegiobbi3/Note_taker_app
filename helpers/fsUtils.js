@@ -1,4 +1,5 @@
 //taken from lesson 22 -> Stu_Modular-Routing
+//using this file to help read, write, and append to my notes files
 const fs = require('fs')
 const util = require('util')
 
