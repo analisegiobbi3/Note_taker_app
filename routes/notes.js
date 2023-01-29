@@ -1,12 +1,31 @@
 const notes = require('express').Router()
-const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
-const uuid = require('../helpers/uuid')
+const { readAndAppend, readFromFile, writeToFile } = require('../helpers/fsUtils');
+const { v4: uuidv4 } = require('../helpers/uuid');
 
-//do I need helper files?
-
-notes.get('/', (req, res) =>{
+notes.get('/', (req, res) => {
     console.log(`${req.method} request recieved`)
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
+});
+
+notes.get('/:note_id', (req, res) => {
+    const noteid = req.params.note_id;
+    readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+        const result = json.filter((note) => note.note_id === noteid )
+        return result.length > 0 ? res.json(result) : res.json('No note with that id')
+    });
+});
+
+notes.delete('/:note_id', (req, res) => {
+    const noteid = req.params.note_id;
+    readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+        const result = json.filter((note) => note.note_id !== noteid )
+        writeToFile('./db/db.json', result)
+        res.json(`note ${noteid} had been deleted`)
+    });
 })
 
 notes.post('/', (req,res) =>{
@@ -18,7 +37,7 @@ notes.post('/', (req,res) =>{
         const newNote = {
             text,
             title,
-            note_id: uuid(),
+            note_id: uuidv4(),
         }
 
         readAndAppend(newNote, './db/db.json');
