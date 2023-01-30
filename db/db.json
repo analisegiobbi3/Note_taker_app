@@ -1,11 +1,1 @@
-[
-    {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
-        "text": "test",
-        "title": "test",
-        "note_id": "37a5af7c-75c8-4965-b094-eb39a573ae51"
-    }
-]
+[{"text":"This note is a test\n","title":"Test Note","note_id":"abdd6b68-2d35-43e3-8cfd-fc10d18a3525"},{"text":"This is another note","title":"Another","note_id":"7102761c-708e-4715-a250-4ea537786203"}]
