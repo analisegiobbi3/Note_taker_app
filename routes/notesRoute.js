@@ -1,11 +1,11 @@
-const notes = require('express').Router()
+const notesRouter = require('express').Router()
 // const { readAndAppend, readFromFile, writeToFile } = require('../helpers/fsUtils');
 // const { v4: uuidv4 } = require('uuid');
 const store = require('../db/store');
 
 
 //get route for all notes page contents
-notes.get('/notes', (req, res) => {
+notesRouter.get('/notes', (req, res) => {
     store
         .getNotes()
         .then(notes => res.json(notes))
@@ -14,7 +14,7 @@ notes.get('/notes', (req, res) => {
     // readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
 });
 
-notes.delete('/notes/:id', (req, res) => {
+notesRouter.delete('/notes/:id', (req, res) => {
     store
         .removeNote(req.param.id)
         .then(() => res.json( { ok: true }))
@@ -23,7 +23,7 @@ notes.delete('/notes/:id', (req, res) => {
 
 
 //route to post notes to the page 
-notes.post('/notes', (req,res) =>{
+notesRouter.post('/notes', (req,res) =>{
     store
         .addNotes(req.body)
         .then(notes => res.json(notes))
