@@ -10,8 +10,11 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
 app.use(express.static('public'));
+//makse sure you are on teh notes page
 app.use('/api', notes);
+//makes sure you see the home page
 app.use('/', html);
 
 

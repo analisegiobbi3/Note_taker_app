@@ -1,6 +1,7 @@
 const app = require('express').Router();
 const path = require('path')
 
+//This will reroute to the notes page when the start button is clicked
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/notes.html'))
 

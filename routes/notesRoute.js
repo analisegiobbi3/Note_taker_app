@@ -10,6 +10,7 @@ notesRouter.get('/notes', (req, res) => {
         .catch(err => console.error(err))
 });
 
+//route to delete notes from the page
 notesRouter.delete('/notes/:id', (req, res) => {
     store
         .deleteNote(req.param.id)
