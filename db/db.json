@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 [
     {
         "title": "Test Title",
@@ -23,9 +21,10 @@
         "text": "This note is a test to show the functionality of the application ",
         "title": "This is a Test",
         "note_id": "1acb3b90-47a9-4426-a134-e1ae50b9c0db"
+    },
+    {
+        "text": "note",
+        "title": "test",
+        "note_id": "8c02e2ac-9eee-4805-a978-9af6d185562a"
     }
 ]
-
-=======
-[{"text":"This note is a test\n","title":"Test Note","note_id":"abdd6b68-2d35-43e3-8cfd-fc10d18a3525"},{"text":"This is another note","title":"Another","note_id":"7102761c-708e-4715-a250-4ea537786203"}]
->>>>>>> d86a9857eb6f94a02d40612d4df5f9506aaf0232

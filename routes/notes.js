@@ -19,7 +19,6 @@ notes.get('/:note_id', (req, res) => {
     });
 });
 
-
 // route to try and delete notes based on their given id
 notes.delete('/:note_id', (req, res) => {
     const noteid = req.params.note_id;
@@ -30,7 +29,7 @@ notes.delete('/:note_id', (req, res) => {
         writeToFile('./db/db.json', result)
         res.json(`note ${noteid} had been deleted`)
     });
-});
+})
 
 //route to post notes to the page 
 notes.post('/', (req,res) =>{
@@ -55,56 +54,7 @@ notes.post('/', (req,res) =>{
     }else{
         res.json('error in posting your new note')
     }
-});
 
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Solution attempt from Tutor help 
-
-
-
-// const notesRouter = require('express').Router()
-// const store = require('../db/store');
-
-
-// //get route for all notes page contents
-// notesRouter.get('/notes', (req, res) => {
-//     store
-//         .getNotes()
-//         .then(notes => res.json(notes))
-//         .catch(err => console.error(err))
-// });
-
-// //route to delete notes from the page
-// notesRouter.delete('/notes/:id', (req, res) => {
-//     store
-//         .deleteNote(req.param.id)
-//         .then(() => res.json( { ok: true }))
-//         .catch(err => console.error(err))
-// })
-
-
-// //route to post notes to the page 
-// notesRouter.post('/notes', (req,res) =>{
-//     store
-//         .addNotes(req.body)
-//         .then(notes => res.json(notes))
-//         .catch(err => console.error(err))
-// })
-
-// module.exports = notesRouter;
+module.exports = notes;
