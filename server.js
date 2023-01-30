@@ -1,6 +1,6 @@
 const express = require('express');
 const notes = require('./routes/notesRoute.js')
-const index = require('./routes/htmlRoutes.js')
+const html = require('./routes/htmlRoutes.js')
 
 const PORT = 3001;
 
@@ -11,8 +11,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
-app.use('./api', notes)
-app.use('/', index)
+app.use('/api', notes);
+app.use('/', html);
 
 
 //listen to port and start server

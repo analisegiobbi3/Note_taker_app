@@ -1,7 +1,5 @@
-const express = require('express').Router();
+const app = require('express').Router();
 const path = require('path')
-
-const app = express();
 
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/notes.html'))
