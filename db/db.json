@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 [
     {
@@ -25,3 +26,6 @@
     }
 ]
 
+=======
+[{"text":"This note is a test\n","title":"Test Note","note_id":"abdd6b68-2d35-43e3-8cfd-fc10d18a3525"},{"text":"This is another note","title":"Another","note_id":"7102761c-708e-4715-a250-4ea537786203"}]
+>>>>>>> d86a9857eb6f94a02d40612d4df5f9506aaf0232
