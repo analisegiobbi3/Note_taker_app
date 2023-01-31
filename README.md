@@ -36,8 +36,12 @@
   ![take notes](./Assets/Screen%20Shot%202023-01-29%20at%204.34.49%20PM.png)
 
   Save the note by clicking the floppy disk icon:
-  ![save](./Assets/Screen%20Shot%202023-01-29%20at%204.36.05%20PM.png)
+  ![save](./Assets/Screen%20Shot%202023-01-31%20at%201.12.10%20PM.png)
 
+  You can view a note again by clicking on it. This will pull up the full note 
+  ![See note](./Assets/Screen%20Shot%202023-01-31%20at%201.12.39%20PM.png)
+
+  Finally, you can delete notes by clicking the red trash can. 
 
   ## [License](#table-of-contents)
   n/a
