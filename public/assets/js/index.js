@@ -25,14 +25,6 @@ const hide = (elem) => {
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
-const getActiveNotes = () => 
-  fetch (`/api/notes/${id}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    }
-  })
-
 const getNotes = () =>
   fetch('/api/notes', {
     method: 'GET',
@@ -92,7 +84,7 @@ const handleNoteDelete = (e) => {
   e.stopPropagation();
 
   const note = e.target;
-  const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+  const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).note_id;
 
   if (activeNote.id === noteId) {
     activeNote = {};
@@ -188,7 +180,8 @@ if (window.location.pathname === '/notes') {
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
-  // noteList.addEventListener('click', handleNoteView)
+  noteList.addEventListener('click', handleNoteDelete)
+  noteList.addEventListener('click', handleNoteView)
 }
 
 getAndRenderNotes();
