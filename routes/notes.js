@@ -1,19 +1,23 @@
 const notes = require('express').Router()
 const { readAndAppend, readFromFile, writeToFile } = require('../helpers/fsUtils');
 const { v4: uuidv4 } = require('uuid');
+const db = require('../db/db.json')
+const path = require('path');
 
 //get route for all notes page contents
 notes.get('/', (req, res) => {
-    console.log(`${req.method} request recieved`)
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
 });
 
 //get route for grabbing individual note ids
 notes.get('/:note_id', (req, res) => {
     const noteid = req.params.note_id;
+    console.log(noteid)
     readFromFile('./db/db.json')
+
     .then((data) => JSON.parse(data))
     .then((json) => {
+        console.log(json)
         const result = json.filter((note) => note.note_id === noteid )
         return result.length > 0 ? res.json(result) : res.json('No note with that id')
     });
