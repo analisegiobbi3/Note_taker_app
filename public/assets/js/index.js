@@ -53,7 +53,7 @@ const deleteNote = (id) =>
 const renderActiveNote = () => {
   hide(saveNoteBtn);
 
-  if (activeNote.id) {
+  if (activeNote.note_id) {
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
@@ -77,7 +77,6 @@ const handleNoteSave = () => {
   });
 };
 
-
 // Delete the clicked note
 const handleNoteDelete = (e) => {
   // Prevents the click listener for the list from being called when the button inside of it is clicked
@@ -86,7 +85,7 @@ const handleNoteDelete = (e) => {
   const note = e.target;
   const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).note_id;
 
-  if (activeNote.id === noteId) {
+  if (activeNote.note_id === noteId) {
     activeNote = {};
   }
 
@@ -95,7 +94,6 @@ const handleNoteDelete = (e) => {
     renderActiveNote();
   });
 };
-
 
 // Sets the activeNote and displays it
 const handleNoteView = (e) => {
@@ -180,8 +178,6 @@ if (window.location.pathname === '/notes') {
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
-  noteList.addEventListener('click', handleNoteDelete)
-  noteList.addEventListener('click', handleNoteView)
 }
 
 getAndRenderNotes();

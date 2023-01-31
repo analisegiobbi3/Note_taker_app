@@ -1,7 +1,37 @@
 [
     {
-        "text": "This is a test note",
-        "title": "Test Note",
-        "note_id": "af48d6ce-644c-4684-9cbf-292c5d9cb2e0"
+        "text": "Notes",
+        "title": "Test",
+        "note_id": "97a066d8-50f8-4f47-b368-3ab7d12231ae"
+    },
+    {
+        "text": "This note is a test to make sure my program is working ",
+        "title": "This note is a test ",
+        "note_id": "6971aec3-5e77-4754-ad29-52b12339adec"
+    },
+    {
+        "text": "This note is another test to make sure my program is working ",
+        "title": "This Note is a test again ",
+        "note_id": "1e237894-bbce-436a-af69-46287d37d8ad"
+    },
+    {
+        "text": "test",
+        "title": "test",
+        "note_id": "8abe0920-6544-47be-a247-7672312612c6"
+    },
+    {
+        "text": "aseraesra",
+        "title": "asetrset",
+        "note_id": "d247733c-09b1-4bab-8fa2-37988b3a1139"
+    },
+    {
+        "text": "asdfasdf",
+        "title": "werewre",
+        "note_id": "39262c22-d5c9-41ca-aa23-4c6371bb5103"
+    },
+    {
+        "text": "test",
+        "title": "test",
+        "note_id": "81aca73d-2c34-46de-b8f4-dbaf7863167c"
     }
 ]
